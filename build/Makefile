@@ -124,6 +124,19 @@ feature_extraction/fast:
 	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/build
 .PHONY : feature_extraction/fast
 
+#=============================================================================
+# Target rules for targets named sift_ransac
+
+# Build rule for target.
+sift_ransac: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sift_ransac
+.PHONY : sift_ransac
+
+# fast build rule for target.
+sift_ransac/fast:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/build
+.PHONY : sift_ransac/fast
+
 2d23d.o: 2d23d.cpp.o
 .PHONY : 2d23d.o
 
@@ -172,6 +185,30 @@ feature_extration.cpp.s:
 	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.s
 .PHONY : feature_extration.cpp.s
 
+sift_ransac.o: sift_ransac.cpp.o
+.PHONY : sift_ransac.o
+
+# target to build an object file
+sift_ransac.cpp.o:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/sift_ransac.cpp.o
+.PHONY : sift_ransac.cpp.o
+
+sift_ransac.i: sift_ransac.cpp.i
+.PHONY : sift_ransac.i
+
+# target to preprocess a source file
+sift_ransac.cpp.i:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/sift_ransac.cpp.i
+.PHONY : sift_ransac.cpp.i
+
+sift_ransac.s: sift_ransac.cpp.s
+.PHONY : sift_ransac.s
+
+# target to generate assembly for a file
+sift_ransac.cpp.s:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/sift_ransac.cpp.s
+.PHONY : sift_ransac.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,12 +219,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... feature_extraction"
 	@echo "... rebuild_cache"
+	@echo "... sift_ransac"
 	@echo "... 2d23d.o"
 	@echo "... 2d23d.i"
 	@echo "... 2d23d.s"
 	@echo "... feature_extration.o"
 	@echo "... feature_extration.i"
 	@echo "... feature_extration.s"
+	@echo "... sift_ransac.o"
+	@echo "... sift_ransac.i"
+	@echo "... sift_ransac.s"
 .PHONY : help
 
 

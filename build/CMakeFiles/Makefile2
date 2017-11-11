@@ -123,6 +123,41 @@ clean: CMakeFiles/feature_extraction.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/sift_ransac.dir
+
+# All Build rule for target.
+CMakeFiles/sift_ransac.dir/all:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/depend
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/kliu1111/code/pose_estimate/build/CMakeFiles  3
+	@echo "Built target sift_ransac"
+.PHONY : CMakeFiles/sift_ransac.dir/all
+
+# Include target in all.
+all: CMakeFiles/sift_ransac.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sift_ransac.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kliu1111/code/pose_estimate/build/CMakeFiles 1
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sift_ransac.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kliu1111/code/pose_estimate/build/CMakeFiles 0
+.PHONY : CMakeFiles/sift_ransac.dir/rule
+
+# Convenience name for target.
+sift_ransac: CMakeFiles/sift_ransac.dir/rule
+.PHONY : sift_ransac
+
+# clean rule for target.
+CMakeFiles/sift_ransac.dir/clean:
+	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/clean
+.PHONY : CMakeFiles/sift_ransac.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/sift_ransac.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

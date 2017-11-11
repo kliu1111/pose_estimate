@@ -24,3 +24,6 @@ target_link_libraries( 2d23d ${OpenCV_LIBS}  ${PCL_LIBRARIES})
 
 add_executable( feature_extraction feature_extration.cpp  )
 target_link_libraries( feature_extraction ${OpenCV_LIBS} )
+
+add_executable( sift_ransac sift_ransac.cpp  )
+target_link_libraries( sift_ransac ${OpenCV_LIBS} )
