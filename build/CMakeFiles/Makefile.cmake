@@ -11,6 +11,8 @@ SET(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/2.8.12.2/CMakeCCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/2.8.12.2/CMakeSystem.cmake"
+  "../cmake_modules/FindCSparse.cmake"
+  "../cmake_modules/FindG2O.cmake"
   "/usr/lib/vtk-5.8/CMake/vtkMakeInstantiator.cmake"
   "/usr/lib/vtk-5.8/UseVTK.cmake"
   "/usr/lib/vtk-5.8/VTKConfig-Java.cmake"
@@ -67,6 +69,8 @@ SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/feature_extraction.dir/DependInfo.cmake"
   "CMakeFiles/image_feature2point.dir/DependInfo.cmake"
   "CMakeFiles/pose_estimation_2d2d.dir/DependInfo.cmake"
+  "CMakeFiles/pose_estimation_3d2d.dir/DependInfo.cmake"
+  "CMakeFiles/pose_estimation_3d3d.dir/DependInfo.cmake"
   "CMakeFiles/sift_ransac.dir/DependInfo.cmake"
   "CMakeFiles/triangulation.dir/DependInfo.cmake"
   )

@@ -1,10 +1,15 @@
 cmake_minimum_required( VERSION 2.8 )
 
-
+set( CMAKE_BUILD_TYPE "Debug" )
 set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
 
-find_package( OpenCV 3.1 REQUIRED )
+# 添加cmake模块以使用g2o
+list( APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules )
 
+find_package( OpenCV 3.1 REQUIRED )
+# find_package( OpenCV REQUIRED ) # use this if in OpenCV2 
+find_package( G2O REQUIRED )
+find_package( CSparse REQUIRED )
 
 
 include_directories( 
@@ -38,3 +43,17 @@ target_link_libraries( image_feature2point ${OpenCV_LIBS} ${PCL_LIBRARIES} )
 # add_executable( triangulation triangulation.cpp extra.cpp) # use this if in opencv2 
 add_executable( triangulation triangulation.cpp )
 target_link_libraries( triangulation ${OpenCV_LIBS} )
+
+add_executable( pose_estimation_3d2d pose_estimation_3d2d.cpp )
+target_link_libraries( pose_estimation_3d2d 
+   ${OpenCV_LIBS}
+   ${CSPARSE_LIBRARY}
+   g2o_core g2o_stuff g2o_types_sba g2o_csparse_extension
+)
+
+add_executable( pose_estimation_3d3d pose_estimation_3d3d.cpp )
+target_link_libraries( pose_estimation_3d3d 
+   ${OpenCV_LIBS}
+   g2o_core g2o_stuff g2o_types_sba g2o_csparse_extension 
+   ${CSPARSE_LIBRARY}
+)
