@@ -1,5 +1,8 @@
 cmake_minimum_required( VERSION 2.8 )
 
+
+set( CMAKE_CXX_FLAGS "-std=c++11 -O3" )
+
 find_package( OpenCV 3.1 REQUIRED )
 
 
@@ -18,3 +21,6 @@ add_definitions( ${PCL_DEFINITIONS} )
 
 add_executable( 2d23d 2d23d.cpp  )
 target_link_libraries( 2d23d ${OpenCV_LIBS}  ${PCL_LIBRARIES})
+
+add_executable( feature_extraction feature_extration.cpp  )
+target_link_libraries( feature_extraction ${OpenCV_LIBS} )

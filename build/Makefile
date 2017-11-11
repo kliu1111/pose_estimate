@@ -111,6 +111,19 @@ depend:
 	$(MAKE) -f CMakeFiles/2d23d.dir/build.make CMakeFiles/2d23d.dir/build
 .PHONY : 2d23d/fast
 
+#=============================================================================
+# Target rules for targets named feature_extraction
+
+# Build rule for target.
+feature_extraction: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 feature_extraction
+.PHONY : feature_extraction
+
+# fast build rule for target.
+feature_extraction/fast:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/build
+.PHONY : feature_extraction/fast
+
 2d23d.o: 2d23d.cpp.o
 .PHONY : 2d23d.o
 
@@ -135,6 +148,30 @@ depend:
 	$(MAKE) -f CMakeFiles/2d23d.dir/build.make CMakeFiles/2d23d.dir/2d23d.cpp.s
 .PHONY : 2d23d.cpp.s
 
+feature_extration.o: feature_extration.cpp.o
+.PHONY : feature_extration.o
+
+# target to build an object file
+feature_extration.cpp.o:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.o
+.PHONY : feature_extration.cpp.o
+
+feature_extration.i: feature_extration.cpp.i
+.PHONY : feature_extration.i
+
+# target to preprocess a source file
+feature_extration.cpp.i:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.i
+.PHONY : feature_extration.cpp.i
+
+feature_extration.s: feature_extration.cpp.s
+.PHONY : feature_extration.s
+
+# target to generate assembly for a file
+feature_extration.cpp.s:
+	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.s
+.PHONY : feature_extration.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -143,10 +180,14 @@ help:
 	@echo "... depend"
 	@echo "... 2d23d"
 	@echo "... edit_cache"
+	@echo "... feature_extraction"
 	@echo "... rebuild_cache"
 	@echo "... 2d23d.o"
 	@echo "... 2d23d.i"
 	@echo "... 2d23d.s"
+	@echo "... feature_extration.o"
+	@echo "... feature_extration.i"
+	@echo "... feature_extration.s"
 .PHONY : help
 
 
