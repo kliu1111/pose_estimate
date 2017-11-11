@@ -125,6 +125,19 @@ feature_extraction/fast:
 .PHONY : feature_extraction/fast
 
 #=============================================================================
+# Target rules for targets named pose_estimation_2d2d
+
+# Build rule for target.
+pose_estimation_2d2d: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pose_estimation_2d2d
+.PHONY : pose_estimation_2d2d
+
+# fast build rule for target.
+pose_estimation_2d2d/fast:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/build
+.PHONY : pose_estimation_2d2d/fast
+
+#=============================================================================
 # Target rules for targets named sift_ransac
 
 # Build rule for target.
@@ -185,6 +198,30 @@ feature_extration.cpp.s:
 	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.s
 .PHONY : feature_extration.cpp.s
 
+pose_estimation_2d2d.o: pose_estimation_2d2d.cpp.o
+.PHONY : pose_estimation_2d2d.o
+
+# target to build an object file
+pose_estimation_2d2d.cpp.o:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.o
+.PHONY : pose_estimation_2d2d.cpp.o
+
+pose_estimation_2d2d.i: pose_estimation_2d2d.cpp.i
+.PHONY : pose_estimation_2d2d.i
+
+# target to preprocess a source file
+pose_estimation_2d2d.cpp.i:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.i
+.PHONY : pose_estimation_2d2d.cpp.i
+
+pose_estimation_2d2d.s: pose_estimation_2d2d.cpp.s
+.PHONY : pose_estimation_2d2d.s
+
+# target to generate assembly for a file
+pose_estimation_2d2d.cpp.s:
+	$(MAKE) -f CMakeFiles/pose_estimation_2d2d.dir/build.make CMakeFiles/pose_estimation_2d2d.dir/pose_estimation_2d2d.cpp.s
+.PHONY : pose_estimation_2d2d.cpp.s
+
 sift_ransac.o: sift_ransac.cpp.o
 .PHONY : sift_ransac.o
 
@@ -218,6 +255,7 @@ help:
 	@echo "... 2d23d"
 	@echo "... edit_cache"
 	@echo "... feature_extraction"
+	@echo "... pose_estimation_2d2d"
 	@echo "... rebuild_cache"
 	@echo "... sift_ransac"
 	@echo "... 2d23d.o"
@@ -226,6 +264,9 @@ help:
 	@echo "... feature_extration.o"
 	@echo "... feature_extration.i"
 	@echo "... feature_extration.s"
+	@echo "... pose_estimation_2d2d.o"
+	@echo "... pose_estimation_2d2d.i"
+	@echo "... pose_estimation_2d2d.s"
 	@echo "... sift_ransac.o"
 	@echo "... sift_ransac.i"
 	@echo "... sift_ransac.s"

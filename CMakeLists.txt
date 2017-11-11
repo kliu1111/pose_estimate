@@ -27,3 +27,7 @@ target_link_libraries( feature_extraction ${OpenCV_LIBS} )
 
 add_executable( sift_ransac sift_ransac.cpp  )
 target_link_libraries( sift_ransac ${OpenCV_LIBS} )
+
+# add_executable( pose_estimation_2d2d pose_estimation_2d2d.cpp extra.cpp ) # use this if in OpenCV2 
+add_executable( pose_estimation_2d2d pose_estimation_2d2d.cpp )
+target_link_libraries( pose_estimation_2d2d ${OpenCV_LIBS} ${PCL_LIBRARIES} )

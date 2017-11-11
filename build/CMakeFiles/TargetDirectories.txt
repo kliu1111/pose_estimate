@@ -1,3 +1,4 @@
 /home/kliu1111/code/pose_estimate/build/CMakeFiles/2d23d.dir
 /home/kliu1111/code/pose_estimate/build/CMakeFiles/feature_extraction.dir
+/home/kliu1111/code/pose_estimate/build/CMakeFiles/pose_estimation_2d2d.dir
 /home/kliu1111/code/pose_estimate/build/CMakeFiles/sift_ransac.dir

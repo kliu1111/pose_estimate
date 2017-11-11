@@ -65,5 +65,6 @@ SET(CMAKE_MAKEFILE_PRODUCTS
 SET(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/2d23d.dir/DependInfo.cmake"
   "CMakeFiles/feature_extraction.dir/DependInfo.cmake"
+  "CMakeFiles/pose_estimation_2d2d.dir/DependInfo.cmake"
   "CMakeFiles/sift_ransac.dir/DependInfo.cmake"
   )
