@@ -31,3 +31,10 @@ target_link_libraries( sift_ransac ${OpenCV_LIBS} )
 # add_executable( pose_estimation_2d2d pose_estimation_2d2d.cpp extra.cpp ) # use this if in OpenCV2 
 add_executable( pose_estimation_2d2d pose_estimation_2d2d.cpp )
 target_link_libraries( pose_estimation_2d2d ${OpenCV_LIBS} ${PCL_LIBRARIES} )
+
+add_executable( image_feature2point image_feature2point.cpp )
+target_link_libraries( image_feature2point ${OpenCV_LIBS} ${PCL_LIBRARIES} )
+
+# add_executable( triangulation triangulation.cpp extra.cpp) # use this if in opencv2 
+add_executable( triangulation triangulation.cpp )
+target_link_libraries( triangulation ${OpenCV_LIBS} )

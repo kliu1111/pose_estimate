@@ -125,6 +125,19 @@ feature_extraction/fast:
 .PHONY : feature_extraction/fast
 
 #=============================================================================
+# Target rules for targets named image_feature2point
+
+# Build rule for target.
+image_feature2point: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 image_feature2point
+.PHONY : image_feature2point
+
+# fast build rule for target.
+image_feature2point/fast:
+	$(MAKE) -f CMakeFiles/image_feature2point.dir/build.make CMakeFiles/image_feature2point.dir/build
+.PHONY : image_feature2point/fast
+
+#=============================================================================
 # Target rules for targets named pose_estimation_2d2d
 
 # Build rule for target.
@@ -149,6 +162,19 @@ sift_ransac: cmake_check_build_system
 sift_ransac/fast:
 	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/build
 .PHONY : sift_ransac/fast
+
+#=============================================================================
+# Target rules for targets named triangulation
+
+# Build rule for target.
+triangulation: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 triangulation
+.PHONY : triangulation
+
+# fast build rule for target.
+triangulation/fast:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/build
+.PHONY : triangulation/fast
 
 2d23d.o: 2d23d.cpp.o
 .PHONY : 2d23d.o
@@ -198,6 +224,30 @@ feature_extration.cpp.s:
 	$(MAKE) -f CMakeFiles/feature_extraction.dir/build.make CMakeFiles/feature_extraction.dir/feature_extration.cpp.s
 .PHONY : feature_extration.cpp.s
 
+image_feature2point.o: image_feature2point.cpp.o
+.PHONY : image_feature2point.o
+
+# target to build an object file
+image_feature2point.cpp.o:
+	$(MAKE) -f CMakeFiles/image_feature2point.dir/build.make CMakeFiles/image_feature2point.dir/image_feature2point.cpp.o
+.PHONY : image_feature2point.cpp.o
+
+image_feature2point.i: image_feature2point.cpp.i
+.PHONY : image_feature2point.i
+
+# target to preprocess a source file
+image_feature2point.cpp.i:
+	$(MAKE) -f CMakeFiles/image_feature2point.dir/build.make CMakeFiles/image_feature2point.dir/image_feature2point.cpp.i
+.PHONY : image_feature2point.cpp.i
+
+image_feature2point.s: image_feature2point.cpp.s
+.PHONY : image_feature2point.s
+
+# target to generate assembly for a file
+image_feature2point.cpp.s:
+	$(MAKE) -f CMakeFiles/image_feature2point.dir/build.make CMakeFiles/image_feature2point.dir/image_feature2point.cpp.s
+.PHONY : image_feature2point.cpp.s
+
 pose_estimation_2d2d.o: pose_estimation_2d2d.cpp.o
 .PHONY : pose_estimation_2d2d.o
 
@@ -246,6 +296,30 @@ sift_ransac.cpp.s:
 	$(MAKE) -f CMakeFiles/sift_ransac.dir/build.make CMakeFiles/sift_ransac.dir/sift_ransac.cpp.s
 .PHONY : sift_ransac.cpp.s
 
+triangulation.o: triangulation.cpp.o
+.PHONY : triangulation.o
+
+# target to build an object file
+triangulation.cpp.o:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.o
+.PHONY : triangulation.cpp.o
+
+triangulation.i: triangulation.cpp.i
+.PHONY : triangulation.i
+
+# target to preprocess a source file
+triangulation.cpp.i:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.i
+.PHONY : triangulation.cpp.i
+
+triangulation.s: triangulation.cpp.s
+.PHONY : triangulation.s
+
+# target to generate assembly for a file
+triangulation.cpp.s:
+	$(MAKE) -f CMakeFiles/triangulation.dir/build.make CMakeFiles/triangulation.dir/triangulation.cpp.s
+.PHONY : triangulation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -255,21 +329,29 @@ help:
 	@echo "... 2d23d"
 	@echo "... edit_cache"
 	@echo "... feature_extraction"
+	@echo "... image_feature2point"
 	@echo "... pose_estimation_2d2d"
 	@echo "... rebuild_cache"
 	@echo "... sift_ransac"
+	@echo "... triangulation"
 	@echo "... 2d23d.o"
 	@echo "... 2d23d.i"
 	@echo "... 2d23d.s"
 	@echo "... feature_extration.o"
 	@echo "... feature_extration.i"
 	@echo "... feature_extration.s"
+	@echo "... image_feature2point.o"
+	@echo "... image_feature2point.i"
+	@echo "... image_feature2point.s"
 	@echo "... pose_estimation_2d2d.o"
 	@echo "... pose_estimation_2d2d.i"
 	@echo "... pose_estimation_2d2d.s"
 	@echo "... sift_ransac.o"
 	@echo "... sift_ransac.i"
 	@echo "... sift_ransac.s"
+	@echo "... triangulation.o"
+	@echo "... triangulation.i"
+	@echo "... triangulation.s"
 .PHONY : help
 
 
